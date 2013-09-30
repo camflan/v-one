@@ -1,0 +1,77 @@
+<koken:include file="inc/header.html" />
+
+<main>
+
+	<!-- Load featured essays -->
+	<koken:load source="essays" limit="3">
+		<div class="row">
+
+		<!-- Loop over each featured essay -->
+		<koken:loop>
+			<article class="col-md-4">
+				<!-- Display essay title -->
+				<h4>
+					<koken:link title="Read {{ essay.title }}">{{ essay.title }}</koken:link>
+				</h4>
+
+				<!-- Display the essay's featured image -->
+				<koken:featured_image>
+
+					<!-- Link image to essay -->
+					<koken:link>
+
+						<!-- Display featured image cropped to 3:2 -->
+						<koken:img size="3:2" class="home-page-essay-img" />
+
+					</koken:link>
+
+				</koken:featured_image>
+
+				<!-- Display truncated essay excerpt plus link to essay -->
+				<p class="home-page-essay-excerpt">
+					{{ essay.excerpt truncate="200" }} <koken:link class="" title="Read {{ essay.title }}">Read More</koken:link>
+				</p>
+			</article>
+		</koken:loop>
+
+    <br />
+    <br />
+
+
+		</div>
+
+	<!-- Fallback content if no data was loaded by koken:load -->
+	<koken:else>
+
+		<!-- Use koken:note to display this message in the Site editor only -->
+		<koken:note>
+			No featured essays found. Assign essays in Text.
+		</koken:note>
+
+	</koken:load>
+
+	<!-- Load this template's source data (featured content) -->
+	<koken:load>
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Slideshow that loads template data (featured content) -->
+            <koken:pulse />
+        </div>
+    </div>
+
+
+	<!-- Fallback content if no data was loaded by koken:load -->
+	<koken:else>
+
+		<!-- Use koken:note to display this message in the Site editor only -->
+		<koken:note>
+			No featured content found. Assign content in the Library.
+		</koken:note>
+
+	</koken:load>
+
+
+</main> <!-- close main -->
+
+<koken:include file="inc/footer.html" />

@@ -1,0 +1,20 @@
+<article>
+
+<header>
+<h2>
+    <koken:link>{{ essay.title }}</koken:link>
+
+</h2>
+<h4>
+    <koken:time />&nbsp;/&nbsp;<koken:categories><koken:loop separator=", "><koken:link>{{ category.title }}</koken:link></koken:loop></koken:categories>
+</h4>
+</header>
+
+<p>
+{{ essay.content }}
+</p>
+
+<footer>
+</footer>
+
+</article>

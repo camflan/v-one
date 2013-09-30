@@ -1,0 +1,26 @@
+{
+	"name": "V-One",
+	"version": "0.5",
+	"description": "Version 1 for camronflanders.com",
+	"demo": "http://camronflanders.com",
+	"author": {
+		"name": "Camron Flanders",
+		"link": "http://camronflanders.com"
+	},
+	"koken_version_required": "0.9",
+
+	"navigation_groups": {
+		"footer": {
+			"label": "Footer",
+			"defaults": [
+				"front", "albums", "contents", "essays", "twitter", "facebook", "gplus"
+			]
+		},
+		"social": {
+			"label": "Footer",
+			"defaults": [
+				"twitter", "facebook", "gplus", "email", "flickr", "github", "pinterest"
+			]
+		}
+	}
+}

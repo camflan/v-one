@@ -1,0 +1,37 @@
+<koken:include file="inc/header.html" />
+
+<div id="content">
+    <!-- Load this template's source data (essays) and limit for pagination -->
+    <koken:load limit="6">
+
+        <div class="lcol">
+
+          <!-- Loop over all returned essays, link to their essay.lens pages -->
+          <koken:loop>
+
+          <koken:include file="inc/_essay.lens" />
+
+          </koken:loop>
+
+          <br>
+
+          <!-- Display pagination links -->
+          <p>
+              <koken:include file="inc/pagination.html" />
+          </p>
+
+          </div> <!-- close .lcol -->
+
+        <!-- Fallback content if no data was loaded by koken:load -->
+        <koken:else>
+
+            <!-- Display fallback message in Site editor only -->
+            <koken:note>
+              No essays found
+            </koken:note>
+
+    </koken:load>
+
+</div> <!-- close #content -->
+
+<koken:include file="inc/footer.html" />
